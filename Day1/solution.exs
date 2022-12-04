@@ -1,4 +1,5 @@
-listOfCalories = input
+{:ok, body} = File.read("input.txt")
+listOfCalories = body
 |> String.split("\n\n")
 |> Enum.map(fn calories ->
   String.split(calories)
